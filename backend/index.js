@@ -19,7 +19,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // connecting to db
 connectDB();
 
-
+app.use("/v1", require("./routes/user.route"));
 
 
 app.use(function (req, res) {
